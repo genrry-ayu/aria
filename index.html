@@ -3,397 +3,292 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ARIA CHEN — PORTFOLIO</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        background: '#F5F4F2',
-        foreground: '#1A1817',
-        card: '#ECEAE7',
-        'card-foreground': '#1A1817',
-        muted: '#E3E0DB',
-        'muted-foreground': '#6B645D',
-        secondary: '#E3E0DB',
-        'secondary-foreground': '#3D3833',
-        primary: '#1A1817',
-        'primary-foreground': '#F5F4F2',
-        border: '#C8C1B9',
-        input: '#C8C1B9',
-        ring: '#6B645D',
-        accent: '#1A1817',
-      },
-    },
-  },
-}
-</script>
+<title>AI BUILDERS DIGEST — 2026.05.20</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
   :root {
     --stroke: 4px;
-    --radius: 0px;
-    --font-family: "Bebas Neue", "Helvetica Neue", Impact, "Source Han Sans SC", "PingFang SC", sans-serif;
-    --background: #F5F4F2;
-    --foreground: #1A1817;
-    --card: #ECEAE7;
-    --card-foreground: #1A1817;
-    --muted: #E3E0DB;
-    --muted-foreground: #6B645D;
-    --secondary: #E3E0DB;
-    --secondary-foreground: #3D3833;
-    --primary: #1A1817;
-    --primary-foreground: #F5F4F2;
+    --font: "Bebas Neue", "Helvetica Neue", Impact, "Source Han Sans SC", "PingFang SC", sans-serif;
+    --body: "Helvetica Neue", Arial, "PingFang SC", "Noto Sans SC", sans-serif;
+    --bg: #F5F4F2;
+    --fg: #1A1817;
+    --muted: #6B645D;
     --border: #C8C1B9;
-    --input: #C8C1B9;
-    --ring: #6B645D;
-    --accent: #1A1817;
+    --card: #ECEAE7;
   }
-
-  *, *::before, *::after { box-sizing: border-box; }
-  img, svg, video, canvas { display: block; max-width: 100%; vertical-align: top; }
-  h1, h2, h3, h4, h5, h6, p, span, label, a, li { border: none; }
-  .card, [data-card] { padding: 0; line-height: 0; font-size: 0; }
-  .card > img, [data-card] > img { display: block; margin: 0; vertical-align: top; width: 100%; }
-  .card-content, [data-card-content] { line-height: 1.5; font-size: 14px; }
-  .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
-  .no-scrollbar::-webkit-scrollbar { display: none; }
-
-  body, * { font-family: var(--font-family); }
-  body { font-weight: 500; }
-
-  html { scroll-behavior: smooth; }
-
-  .section-entrance {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1),
-                transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  }
-  .section-entrance.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .brutal-border {
-    border: var(--stroke) solid var(--border);
-  }
-
-  .brutal-tag {
-    display: inline-block;
-    padding: 6px 16px;
-    font-size: 14px;
-    letter-spacing: 0.08em;
-    background: var(--muted);
-    border: var(--stroke) solid var(--border);
-  }
-
-  .brutal-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 52px;
-    padding: 12px 32px;
-    font-size: 18px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    text-decoration: none;
-    border: var(--stroke) solid var(--foreground);
-    transition: all 0.15s ease;
-  }
-  .brutal-btn-primary {
-    background: var(--primary);
-    color: var(--primary-foreground);
-  }
-  .brutal-btn-outline {
-    background: transparent;
-    color: var(--foreground);
-  }
-  .brutal-btn:hover {
-    background: var(--foreground);
-    color: var(--primary-foreground);
-  }
-  .brutal-btn-outline:hover {
-    background: var(--foreground);
-    color: var(--background);
-  }
-
-  .brutal-link {
-    text-decoration: none;
-    color: var(--foreground);
-    border-bottom: var(--stroke) solid transparent;
-    transition: border-color 0.2s ease;
-    padding-bottom: 2px;
-  }
-  .brutal-link:hover {
-    border-bottom-color: var(--foreground);
-  }
-
-  .img-cover {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .dark-section {
-    background: #1A1817;
-    color: #F5F4F2;
-  }
-  .dark-section .text-muted-foreground {
-    color: #A69E95;
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--fg);font-family:var(--body);font-weight:400;font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  img,svg{display:block;max-width:100%}
+</style>
+<style>
+  .container{max-width:1200px;margin:0 auto;padding:0 20px}
+  .page-wrap{max-width:100%;overflow:hidden}
+  .display-lg{font-family:var(--font);font-weight:500;text-transform:uppercase;line-height:0.92;letter-spacing:-1px}
+  .display-md{font-family:var(--font);font-weight:500;text-transform:uppercase;line-height:0.95;letter-spacing:-0.5px}
+  .label{font-family:var(--font);font-weight:500;text-transform:uppercase;letter-spacing:0.08em}
+  .b4{border:var(--stroke) solid var(--border)}
+  .bt4{border-top:var(--stroke) solid var(--border)}
+  .tag-fill{display:inline-block;padding:4px 14px;font-size:12px;letter-spacing:0.1em;background:#ECEAE7;border:4px solid #C8C1B9}
+  .nav{position:fixed;top:0;left:0;right:0;z-index:100;height:80px;background:rgba(245,244,242,0.95);backdrop-filter:blur(6px);display:flex;align-items:center;border-bottom:var(--stroke) solid var(--border)}
+  .nav-inner{width:100%;max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+  .nav-logo{font-family:var(--font);font-weight:500;font-size:26px;letter-spacing:0.05em;text-transform:uppercase;text-decoration:none;color:var(--fg)}
+  .nav-links{display:flex;gap:32px;align-items:center}
+  .nav-links a{font-family:var(--font);font-weight:500;font-size:18px;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;color:var(--fg);padding-bottom:3px;border-bottom:var(--stroke) solid transparent;transition:border-color 0.2s}
+  .nav-links a:hover{border-bottom-color:var(--fg)}
+  .hero{min-height:80vh;display:flex;align-items:center;padding-top:90px}
+  .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .hero-title{font-size:clamp(56px,7vw,100px)}
+  .hero-img-block{aspect-ratio:4/3;overflow:hidden}
+  .hero-img-block img{width:100%;height:100%;object-fit:cover}
+  .hero-meta{margin-top:20px;display:flex;gap:24px;align-items:center;font-size:13px;color:var(--muted)}
+  .hero-tag{display:inline-block;padding:6px 18px;background:var(--card);font-size:14px;letter-spacing:0.08em}
+  .section{padding:100px 0}
+  .section-dark{background:#1A1817;color:#F5F4F2;padding:100px 0}
+  .section-dark .b4{border-color:#3D3833}
+  .section-header{display:flex;align-items:baseline;gap:24px;margin-bottom:60px}
+  .section-num{font-family:var(--font);font-weight:500;font-size:20px;letter-spacing:0.05em;color:var(--muted);flex-shrink:0}
+  .section-title{font-size:clamp(40px,5vw,72px);flex:1}
+  .insight{margin-bottom:24px}
+  .insight-inner{display:grid;grid-template-columns:180px 1fr;gap:0;padding:0}
+  .insight-side{padding:28px 20px;display:flex;flex-direction:column;gap:8px}
+  .insight-main{padding:28px 32px;border-left:var(--stroke) solid var(--border)}
+  .insight-headline{font-size:18px;font-weight:600;margin-bottom:12px;line-height:1.4}
+  .insight-body{font-size:14px;color:var(--muted);line-height:1.7}
+  .fold-toggle{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-size:13px;cursor:pointer;user-select:none;color:var(--muted);padding-bottom:2px;border-bottom:1px dashed var(--border);transition:color 0.2s}
+  .fold-toggle:hover{color:var(--fg)}
+  .fold-toggle .arrow{display:inline-block;transition:transform 0.25s;font-size:14px}
+  .fold-toggle.open .arrow{transform:rotate(90deg)}
+  .fold-content{max-height:0;overflow:hidden;transition:max-height 0.35s,opacity 0.25s;opacity:0}
+  .fold-content.open{max-height:2000px;opacity:1}
+  .fold-inner{margin-top:14px;padding-top:14px;border-top:var(--stroke) solid var(--border);font-size:14px;color:var(--muted);line-height:1.7}
+  .fold-inner .quote{border-left:var(--stroke) solid var(--border);padding-left:16px;margin-bottom:12px;font-style:italic}
+  .fold-inner .attribution{font-size:12px;color:var(--muted);margin-top:4px}
+  .fold-source-link{color:var(--muted);font-size:12px}
+  .fold-source-link:hover{color:var(--fg)}
+  .matters-grid{display:flex;flex-direction:column;gap:4px}
+  .matter-item{padding:24px 28px;display:grid;grid-template-columns:1fr 1fr;gap:32px}
+  .matter-item:nth-child(odd){background:var(--card)}
+  .section-dark .matter-item:nth-child(odd){background:#222}
+  .matter-topic{font-weight:600;font-size:15px;line-height:1.5}
+  .matter-context{font-size:14px;color:var(--muted);line-height:1.7}
+  .source-group{margin-bottom:36px}
+  .source-group-header{display:flex;align-items:center;gap:16px;margin-bottom:16px}
+  .source-type-badge{display:inline-block;padding:4px 14px;font-size:12px;letter-spacing:0.08em;background:var(--card);flex-shrink:0}
+  .source-title{font-weight:600;font-size:16px}
+  .source-title a{color:var(--fg);text-decoration:none;border-bottom:var(--stroke) solid var(--border)}
+  .source-title a:hover{border-bottom-color:var(--fg)}
+  .source-url{font-size:12px;color:var(--muted);margin-top:2px}
+  .source-url a{color:var(--muted)}
+  .source-url a:hover{color:var(--fg)}
+  .source-desc{font-size:14px;color:var(--muted);line-height:1.7;margin-top:8px}
+  .source-tweet{padding:14px 0;border-top:var(--stroke) solid var(--border)}
+  .source-tweet:first-child{border-top:none}
+  .source-tweet .tweet-text{font-size:14px;line-height:1.65}
+  .source-tweet .tweet-meta{margin-top:6px;font-size:12px;color:var(--muted)}
+  .source-tweet .tweet-meta a{color:var(--muted)}
+  .source-tweet .tweet-meta a:hover{color:var(--fg)}
+  .builder-header{margin-bottom:8px}
+  .builder-name{font-weight:600;font-size:16px}
+  .builder-bio{font-size:12px;color:var(--muted);margin-top:2px}
+  .podcast-summary{font-size:14px;color:var(--muted);line-height:1.7}
+  .podcast-summary .quote{border-left:var(--stroke) solid var(--border);padding-left:16px;margin-top:12px;margin-bottom:12px;font-style:italic;font-size:13px;color:var(--muted)}
+  .footer{padding:60px 0;border-top:var(--stroke) solid var(--border);display:flex;justify-content:space-between;align-items:center}
+  .footer a{color:var(--muted);text-decoration:none;border-bottom:var(--stroke) solid transparent}
+  .footer a:hover{border-bottom-color:var(--muted)}
+  @media (max-width:768px){
+    .hero-grid{grid-template-columns:1fr}
+    .insight-inner{grid-template-columns:1fr}
+    .insight-main{border-left:none;border-top:var(--stroke) solid var(--border)}
+    .matter-item{grid-template-columns:1fr;gap:12px}
+    .nav-links a{font-size:14px}
+    .section-header{flex-direction:column;gap:8px}
+    .section-title{font-size:32px}
   }
 </style>
 </head>
-<body class="bg-background text-foreground">
+<body>
 
-<!-- Nav -->
-<nav class="fixed top-0 w-full z-50 h-20 flex items-center bg-background/95 backdrop-blur-sm"
-     style="border-bottom: var(--stroke) solid var(--border);">
-  <div class="w-full max-w-[1600px] mx-auto px-6 md:px-12 flex items-center justify-between">
-    <span class="text-xl tracking-[0.12em]" style="font-weight:500;">ARIA CHEN</span>
-    <div class="hidden md:flex items-center gap-10">
-      <a href="#work" class="text-lg tracking-[0.1em] no-underline brutal-link" style="font-weight:500;">WORK</a>
-      <a href="#writing" class="text-lg tracking-[0.1em] no-underline brutal-link" style="font-weight:500;">WRITING</a>
-      <a href="#about" class="text-lg tracking-[0.1em] no-underline brutal-link" style="font-weight:500;">ABOUT</a>
-      <a href="#contact" class="text-lg tracking-[0.1em] no-underline brutal-link" style="font-weight:500;">CONTACT</a>
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">AI BUILDERS DIGEST</a>
+    <div class="nav-links">
+      <a href="#insights">INSIGHTS</a>
+      <a href="#matters">MATTERS</a>
+      <a href="#sources">SOURCES</a>
     </div>
   </div>
 </nav>
 
-<!-- Hero -->
-<section id="hero" style="min-height:100vh; position:relative; display:flex; align-items:center; background: var(--background);">
-  <div class="w-full max-w-[1600px] mx-auto px-6 md:px-12" style="padding-top:80px; padding-bottom:60px;">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-      <div style="max-width:640px;">
-        <p class="text-sm tracking-[0.15em] mb-6 text-muted-foreground" style="font-weight:500;">PRODUCT DESIGNER · BEIJING</p>
-        <h1 style="font-size:clamp(60px,8vw,120px); font-weight:500; line-height:0.92; letter-spacing:-2px; margin:0; text-transform:uppercase;">
-          I MAKE<br/>THINGS<br/>THAT WORK
-        </h1>
-        <p class="mt-8 text-base text-muted-foreground" style="font-weight:500; max-width:440px; line-height:1.5; font-family:'Helvetica Neue',Arial,'PingFang SC','Noto Sans SC',sans-serif;">
-          Six years designing for startups and enterprise. AI tools, dashboards, and products used by millions.
-        </p>
-        <div class="mt-10 flex gap-5">
-          <a href="#work" class="brutal-btn brutal-btn-primary">VIEW WORK</a>
-          <a href="#writing" class="brutal-btn brutal-btn-outline">READ NOTES</a>
-        </div>
-      </div>
-      <div class="relative aspect-square lg:aspect-auto lg:h-[70vh] brutal-border overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1567095761054-7a02e69e5c43?w=900&q=80&auto=format&fit=crop"
-             alt="Studio workspace"
-             class="img-cover" />
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Work -->
-<section id="work" class="section-entrance py-32 lg:py-40">
-  <div class="w-full max-w-[1600px] mx-auto px-6 md:px-12">
-    <p class="text-sm tracking-[0.15em] mb-3 text-muted-foreground" style="font-weight:500;">— SELECTED PROJECTS</p>
-    <h2 style="font-size:clamp(40px,5vw,72px); font-weight:500; line-height:0.95; letter-spacing:-1px; margin:0; text-transform:uppercase;">
-      THINGS I'VE<br/>BUILT AND SHIPPED
-    </h2>
-
-    <!-- Work item 1 -->
-    <div class="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-      <div class="aspect-[4/3] brutal-border overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80&auto=format&fit=crop" alt="Bitable AI" class="img-cover" />
-      </div>
+<!-- HERO -->
+<section class="hero">
+  <div class="container" style="width:100%;">
+    <div class="hero-grid">
       <div>
-        <span class="brutal-tag text-xs tracking-[0.12em]">FEISHU · 2025</span>
-        <h3 class="mt-8 text-2xl tracking-[0.05em] uppercase" style="font-weight:500;">Bitable AI Copilot</h3>
-        <p class="mt-4 text-sm leading-relaxed text-muted-foreground" style="font-weight:400; font-family:'Helvetica Neue',Arial,'PingFang SC','Noto Sans SC',sans-serif;">
-          Natural language interface for spreadsheet operations. Users can ask questions and perform complex operations in plain language. Task completion time reduced by 47%.
+        <div class="hero-tag label" style="margin-bottom:24px;">2026.05.20 · WED</div>
+        <h1 class="display-lg hero-title">AI BUILDERS<br/>DIGEST</h1>
+        <div class="hero-meta">
+          <span>6 INSIGHTS</span>
+          <span class="label" style="font-size:20px;color:var(--border);">|</span>
+          <span>6 TOPICS</span>
+          <span class="label" style="font-size:20px;color:var(--border);">|</span>
+          <span>14 SOURCES</span>
+        </div>
+        <p style="margin-top:28px;font-size:14px;color:var(--muted);line-height:1.7;max-width:440px;">
+          What the AI world talked about today — from Anthropic's agent platform play to the fragility of production AI.
         </p>
-        <a href="#" class="mt-6 inline-block brutal-link text-sm tracking-[0.12em] uppercase" style="font-weight:500;">CASE STUDY →</a>
       </div>
-    </div>
-
-    <!-- Work item 2 -->
-    <div class="mt-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-      <div class="aspect-[4/3] brutal-border overflow-hidden lg:order-2">
-        <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=80&auto=format&fit=crop" alt="Dashboard" class="img-cover" />
-      </div>
-      <div class="lg:order-1">
-        <span class="brutal-tag text-xs tracking-[0.12em]">ENTERPRISE · 2024</span>
-        <h3 class="mt-8 text-2xl tracking-[0.05em] uppercase" style="font-weight:500;">Analytics Dashboard</h3>
-        <p class="mt-4 text-sm leading-relaxed text-muted-foreground" style="font-weight:400; font-family:'Helvetica Neue',Arial,'PingFang SC','Noto Sans SC',sans-serif;">
-          Real-time data visualization platform built for 50,000+ enterprise users. Designed for clarity and performance at scale.
-        </p>
-        <a href="#" class="mt-6 inline-block brutal-link text-sm tracking-[0.12em] uppercase" style="font-weight:500;">CASE STUDY →</a>
-      </div>
-    </div>
-
-    <!-- Work item 3 -->
-    <div class="mt-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-      <div class="aspect-[4/3] brutal-border overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=800&q=80&auto=format&fit=crop" alt="Flow" class="img-cover" />
-      </div>
-      <div>
-        <span class="brutal-tag text-xs tracking-[0.12em]">MOBILE · 2023</span>
-        <h3 class="mt-8 text-2xl tracking-[0.05em] uppercase" style="font-weight:500;">Flow — Task Manager</h3>
-        <p class="mt-4 text-sm leading-relaxed text-muted-foreground" style="font-weight:400; font-family:'Helvetica Neue',Arial,'PingFang SC','Noto Sans SC',sans-serif;">
-          Minimalist task management app shipped on iOS and Android. Rated 4.8 stars with over 200K downloads.
-        </p>
-        <a href="#" class="mt-6 inline-block brutal-link text-sm tracking-[0.12em] uppercase" style="font-weight:500;">CASE STUDY →</a>
+      <div class="hero-img-block b4">
+        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&q=80&auto=format&fit=crop" alt="AI abstract" />
       </div>
     </div>
   </div>
 </section>
 
-<!-- Stats — Dark Section (one dark section allowed) -->
-<section class="section-entrance dark-section py-28 lg:py-36">
-  <div class="w-full max-w-[1600px] mx-auto px-6 md:px-12">
-    <div class="grid grid-cols-2 lg:grid-cols-4" style="gap:0; border:4px solid #3D3833;">
-      <div class="px-8 py-14 text-center" style="border-right:4px solid #3D3833;">
-        <div class="text-6xl lg:text-7xl tracking-tight" style="font-weight:500; line-height:0.9;">6+</div>
-        <div class="text-sm mt-4 uppercase tracking-[0.15em]" style="font-weight:500; color:#A69E95;">Years</div>
-      </div>
-      <div class="px-8 py-14 text-center" style="border-right:4px solid #3D3833;">
-        <div class="text-6xl lg:text-7xl tracking-tight" style="font-weight:500; line-height:0.9;">30+</div>
-        <div class="text-sm mt-4 uppercase tracking-[0.15em]" style="font-weight:500; color:#A69E95;">Projects</div>
-      </div>
-      <div class="px-8 py-14 text-center" style="border-right:4px solid #3D3833;">
-        <div class="text-6xl lg:text-7xl tracking-tight" style="font-weight:500; line-height:0.9;">12</div>
-        <div class="text-sm mt-4 uppercase tracking-[0.15em]" style="font-weight:500; color:#A69E95;">Awards</div>
-      </div>
-      <div class="px-8 py-14 text-center">
-        <div class="text-6xl lg:text-7xl tracking-tight" style="font-weight:500; line-height:0.9;">500K+</div>
-        <div class="text-sm mt-4 uppercase tracking-[0.15em]" style="font-weight:500; color:#A69E95;">Users</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Images / Gallery spread -->
-<section class="section-entrance py-20 lg:py-28">
-  <div class="w-full max-w-[1600px] mx-auto px-6 md:px-12">
-    <div class="grid grid-cols-2 lg:grid-cols-3 gap-2">
-      <div class="aspect-square brutal-border overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&q=80&auto=format&fit=crop" class="img-cover" alt="" />
-      </div>
-      <div class="aspect-square brutal-border overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=500&q=80&auto=format&fit=crop" class="img-cover" alt="" />
-      </div>
-      <div class="aspect-square brutal-border overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&q=80&auto=format&fit=crop" class="img-cover" alt="" />
-      </div>
-      <div class="aspect-square brutal-border overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=500&q=80&auto=format&fit=crop" class="img-cover" alt="" />
-      </div>
-      <div class="aspect-square brutal-border overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1567095761054-7a02e69e5c43?w=500&q=80&auto=format&fit=crop" class="img-cover" alt="" />
-      </div>
-      <div class="aspect-square brutal-border overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&q=80&auto=format&fit=crop" class="img-cover" alt="" />
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Writing -->
-<section id="writing" class="section-entrance py-32 lg:py-40">
-  <div class="w-full max-w-[1600px] mx-auto px-6 md:px-12">
-    <p class="text-sm tracking-[0.15em] mb-3 text-muted-foreground" style="font-weight:500;">— JOURNAL</p>
-    <h2 style="font-size:clamp(40px,5vw,72px); font-weight:500; line-height:0.95; letter-spacing:-1px; margin:0; text-transform:uppercase;">
-      NOTES ON DESIGN<br/>& THE WORLD
-    </h2>
-
-    <div class="mt-16 space-y-16">
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 brutal-border p-8 lg:p-12 bg-background">
-        <div class="lg:col-span-1">
-          <p class="text-sm text-muted-foreground" style="font-weight:500;">MAY 12, 2026</p>
-          <p class="mt-4 text-xs uppercase tracking-[0.12em] bg-muted brutal-link px-3 py-1 inline-block" style="">← DESIGN · AI</p>
-        </div>
-        <div class="lg:col-span-2">
-          <h3 class="text-xl tracking-[0.03em] uppercase" style="font-weight:500;">On the Invisible Craft of AI Interfaces</h3>
-          <p class="mt-4 text-sm leading-relaxed text-muted-foreground" style="font-weight:400; font-family:'Helvetica Neue',Arial,'PingFang SC','Noto Sans SC',sans-serif;">
-            The best AI interactions don't feel like talking to a machine. They feel like extension — of thought, of intention. But getting there requires a kind of restraint that's counterintuitive for product designers. We're so used to making things visible, legible, explicit. But good AI is invisible. It anticipates. It stays out of the way.
-          </p>
-          <a href="#" class="mt-4 inline-block brutal-link text-sm tracking-[0.12em] uppercase" style="font-weight:500;">Read full essay →</a>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 brutal-border p-8 lg:p-12 bg-background">
-        <div class="lg:col-span-1">
-          <p class="text-sm text-muted-foreground" style="font-weight:500;">APR 28, 2026</p>
-          <p class="mt-4 text-xs uppercase tracking-[0.12em] bg-muted brutal-link px-3 py-1 inline-block">← SYSTEMS · PRODUCT</p>
-        </div>
-        <div class="lg:col-span-2">
-          <h3 class="text-xl tracking-[0.03em] uppercase" style="font-weight:500;">What Spreadsheets Taught Me About Systems Thinking</h3>
-          <p class="mt-4 text-sm leading-relaxed text-muted-foreground" style="font-weight:400; font-family:'Helvetica Neue',Arial,'PingFang SC','Noto Sans SC',sans-serif;">
-            I've spent years working on a spreadsheet product. Not the most glamorous job, but it taught me something profound: every grid is a model of how someone thinks. The columns are their categories. The rows are their cases. The formulas are their logic.
-          </p>
-          <a href="#" class="mt-4 inline-block brutal-link text-sm tracking-[0.12em] uppercase" style="font-weight:500;">Read full essay →</a>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 brutal-border p-8 lg:p-12 bg-background">
-        <div class="lg:col-span-1">
-          <p class="text-sm text-muted-foreground" style="font-weight:500;">MAR 15, 2026</p>
-          <p class="mt-4 text-xs uppercase tracking-[0.12em] bg-muted brutal-link px-3 py-1 inline-block">← CREATIVITY · CRAFT</p>
-        </div>
-        <div class="lg:col-span-2">
-          <h3 class="text-xl tracking-[0.03em] uppercase" style="font-weight:500;">Notes on Constraint-Led Creativity</h3>
-          <p class="mt-4 text-sm leading-relaxed text-muted-foreground" style="font-weight:400; font-family:'Helvetica Neue',Arial,'PingFang SC','Noto Sans SC',sans-serif;">
-            I used to think constraints were obstacles. Now I think they're the only thing that makes good work possible. A blank page is paralyzing. A well-defined boundary — in budget, time, or technology — forces decisions. And decisions are what design is made of.
-          </p>
-          <a href="#" class="mt-4 inline-block brutal-link text-sm tracking-[0.12em] uppercase" style="font-weight:500;">Read full essay →</a>
-        </div>
-      </div>
+<!-- 01: INSIGHTS -->
+<div id="insights" class="page-wrap" style="border-top:var(--stroke) solid var(--border);"></div>
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2 class="display-md section-title">INSIGHTS · 洞察</h2>
     </div>
 
-    <a href="#" class="mt-16 inline-block brutal-btn brutal-btn-outline text-lg">ALL NOTES</a>
-  </div>
-</section>
-
-<!-- About -->
-<section id="about" class="section-entrance py-32 lg:py-40">
-  <div class="w-full max-w-[1600px] mx-auto px-6 md:px-12">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-      <div>
-        <p class="text-sm tracking-[0.15em] mb-3 text-muted-foreground" style="font-weight:500;">— ABOUT</p>
-        <h2 style="font-size:clamp(40px,5vw,72px); font-weight:500; line-height:0.95; letter-spacing:-1px; margin:0; text-transform:uppercase;">
-          HELLO,<br/>I'M ARIA
-        </h2>
-        <div class="mt-10 aspect-[4/3] brutal-border overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1567095761054-7a02e69e5c43?w=800&q=80&auto=format&fit=crop" alt="Studio" class="img-cover" />
+    <!-- 1 -->
+    <div class="insight b4">
+      <div class="insight-inner">
+        <div class="insight-side">
+          <div class="tag-fill label">平台战略</div>
+          <span class="label" style="font-size:13px;color:var(--muted);">SOURCE<br/>AI & I PODCAST</span>
         </div>
-      </div>
-      <div>
-        <p class="text-sm leading-relaxed" style="font-weight:400; font-family:'Helvetica Neue',Arial,'PingFang SC','Noto Sans SC',sans-serif;">
-          I'm a product designer from Hangzhou, based in Beijing. Studied interaction design at Zhejiang University. Worked at a YC startup in SF, then Alibaba, now ByteDance — designing Feishu Bitable, used by millions.
-        </p>
-        <p class="mt-6 text-sm leading-relaxed" style="font-weight:400; font-family:'Helvetica Neue',Arial,'PingFang SC','Noto Sans SC',sans-serif;">
-          I believe in clarity, craft, and context. Great design is invisible — it disappears into the user's flow. My job is to make the complex feel simple, and the functional feel inevitable.
-        </p>
-        <p class="mt-6 text-sm leading-relaxed text-muted-foreground" style="font-weight:400; font-family:'Helvetica Neue',Arial,'PingFang SC','Noto Sans SC',sans-serif;">
-          Outside of work: pour-over coffee, street photography, and too many books stacked on my nightstand.
-        </p>
-
-        <div class="mt-12 grid grid-cols-2 gap-x-12 gap-y-8">
-          <div>
-            <p class="text-xs uppercase tracking-[0.15em] text-muted-foreground" style="font-weight:500;">Currently</p>
-            <p class="mt-2 text-sm uppercase tracking-[0.05em]" style="font-weight:500;">Sr. Product Designer<br/>@ ByteDance</p>
+        <div class="insight-main">
+          <div class="insight-headline">模型与「马具」深度绑定，这是下一代平台战争的核心</div>
+          <div class="insight-body">Anthropic 平台团队两位负责人给出一个被很多人忽略的判断：好的 agent 不是靠通用马具搭模型拼出来的，而是每一个模型都需要和自己深度定制的「马具」紧密配合。模型在进化，Agent SDK、tool calling、context 管理也必须跟着演化。Cursor 那种一层抽象兼容多模型的做法，长远看可能被各家的专有马具拉开差距。</div>
+          <div class="fold-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            <span class="arrow">▶</span> 查看原文
           </div>
-          <div>
-            <p class="text-xs uppercase tracking-[0.15em] text-muted-foreground" style="font-weight:500;">Previously</p>
-            <p class="mt-2 text-sm uppercase tracking-[0.05em]" style="font-weight:500;">Alibaba<br/>Rows AI<br/>Studio Dumbar</p>
+          <div class="fold-content">
+            <div class="fold-inner">
+              <div class="quote">"I think for the next generation of models... everyone's taking slightly different techniques and perspectives on how they want to advance their model. ... The harness and the model get very paired."</div>
+              <div class="attribution">— Angela, Head of Platform Engineering, Anthropic</div>
+            </div>
           </div>
-          <div>
-            <p class="text-xs uppercase tracking-[0.15em] text-muted-foreground" style="font-weight:500;">Education</p>
-            <p class="mt-2 text-sm uppercase tracking-[0.05em]" style="font-weight:500;">Zhejiang University</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="insight b4" style="border-top:none;">
+      <div class="insight-inner">
+        <div class="insight-side">
+          <div class="tag-fill label">产品范式</div>
+          <span class="label" style="font-size:13px;color:var(--muted);">SOURCE<br/>AI & I PODCAST</span>
+        </div>
+        <div class="insight-main">
+          <div class="insight-headline">Agent 的「可生产化」比「能干活」难出一个量级</div>
+          <div class="insight-body">很多人都能用 Claude Code 写一个能跑的原型。但真正让 agent 投入生产、24 小时不停机、处理长时异步任务、管理 session 状态和凭证——这些基础设施问题才是最大的坑。Anthropic 内部也反复踩过，最终决定把 Managed Agents 做成开箱即用的平台层。</div>
+          <div class="fold-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            <span class="arrow">▶</span> 查看原文
           </div>
-          <div>
-            <p class="text-xs uppercase tracking-[0.15em] text-muted-foreground" style="font-weight:500;">Elsewhere</p>
-            <p class="mt-2 text-sm uppercase tracking-[0.05em]" style="font-weight:500;">
-              <a href="#" class="brutal-link">Twitter</a> ·
-              <a href="#" class="brutal-link">Dribbble</a><br/>
-              <a href="#" class="brutal-link">GitHub</a> ·
-              <a href="#" class="brutal-link">Letterboxd</a>
-            </p>
+          <div class="fold-content">
+            <div class="fold-inner">
+              <div class="quote">"What we saw with a lot of customers was: okay, now I want to go and take that thing and get it into production... and everybody hits an infrastructure wall."</div>
+              <div class="attribution">— Caitlin, Head of Platform Product, Anthropic</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="insight b4" style="border-top:none;">
+      <div class="insight-inner">
+        <div class="insight-side">
+          <div class="tag-fill label">组织效能</div>
+          <span class="label" style="font-size:13px;color:var(--muted);">SOURCE<br/>AI & I PODCAST</span>
+        </div>
+        <div class="insight-main">
+          <div class="insight-headline">Agent 需要「主人」—— 没人持续维护的 agent 会死掉</div>
+          <div class="insight-body">Anthropic 发现最成功的 agent 不是由中央平台团队维护的，而是由业务团队在使用过程中自己迭代——甚至通过 Claude Code 直接改 PR。Agent 的 ownership 应该是去中心化的，平台只需提供「安全的修改通道」。</div>
+          <div class="fold-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            <span class="arrow">▶</span> 查看原文
+          </div>
+          <div class="fold-content">
+            <div class="fold-inner">
+              <div class="quote">"A really cool thing ended up happening where people on those teams who were using the tool were like 'I wish this little thing could get tweaked'. And they popped open Claude Code, made some changes themselves to the actual system."</div>
+              <div class="attribution">— Caitlin, Head of Platform Product, Anthropic</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="insight b4" style="border-top:none;">
+      <div class="insight-inner">
+        <div class="insight-side">
+          <div class="tag-fill label">技术治理</div>
+          <span class="label" style="font-size:13px;color:var(--muted);">SOURCE<br/>ANTHROPIC BLOG</span>
+        </div>
+        <div class="insight-main">
+          <div class="insight-headline">系统提示词改一行，Claude Code 可能变笨——Anthropic 踩过的坑值得所有人看</div>
+          <div class="insight-body">Anthropic Engineering 发布罕见详细 postmortem：Claude Code 过去一个月出现三次「变笨」。原因包括：默认推理深度调低、session 过期后 reasoning 被清空、降低冗长 system prompt 影响编码质量。每个改动都是合理优化，叠加起来就像全面降级。</div>
+          <div class="fold-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            <span class="arrow">▶</span> 查看原文
+          </div>
+          <div class="fold-content">
+            <div class="fold-inner">
+              <div class="quote">"Because each change affected a different slice of traffic on a different schedule, the aggregate effect looked like broad, inconsistent degradation."</div>
+              <div class="attribution">— Anthropic Engineering: "An update on recent Claude Code quality reports"</div>
+              <a class="fold-source-link" href="https://www.anthropic.com/engineering/april-23-postmortem" target="_blank">Read full postmortem →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="insight b4" style="border-top:none;">
+      <div class="insight-inner">
+        <div class="insight-side">
+          <div class="tag-fill label">产品更新</div>
+          <span class="label" style="font-size:13px;color:var(--muted);">SOURCE<br/>CLAUDEX · BLOG</span>
+        </div>
+        <div class="insight-main">
+          <div class="insight-headline">Claude 双线加码：Design token 翻倍 + Managed Agents 记忆上线</div>
+          <div class="insight-body">Claude Design 全线翻倍 token 限制。同时 Managed Agents 正式上线跨 session 记忆功能，采用文件系统存储，支持审计日志、版本回滚、API 管理。Netflix 和 Rakuten 已在用。产品侧和平台侧同时加码——Anthropic 正在押注「agent 即基础设施」。</div>
+          <div class="fold-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            <span class="arrow">▶</span> 查看原文
+          </div>
+          <div class="fold-content">
+            <div class="fold-inner">
+              <div class="quote">"You can now create more with Claude Design. We've doubled token limits across every plan." — @claudeai</div>
+              <div class="quote" style="margin-top:12px;">"Memory on Claude Managed Agents is available today. Memories are files that can be exported and independently managed via the API." — Claude Blog</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="insight b4" style="border-top:none;">
+      <div class="insight-inner">
+        <div class="insight-side">
+          <div class="tag-fill label">设计趋势</div>
+          <span class="label" style="font-size:13px;color:var(--muted);">SOURCE<br/>CLAUDEX</span>
+        </div>
+        <div class="insight-main">
+          <div class="insight-headline">Anthropic 新增 200+ 日常连接器——Agent 从办公工具走向生活助手</div>
+          <div class="insight-body">Claude 接入 AllTrails、Uber、Instacart、Spotify、Resy 等生活应用，连接器总数突破 200 个。Claude 会在对话中动态推荐相关 connector。无广告无付费推荐。从 work tool 向 everyday assistant 的关键一步。</div>
+          <div class="fold-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+            <span class="arrow">▶</span> 查看原文
+          </div>
+          <div class="fold-content">
+            <div class="fold-inner">
+              <a class="fold-source-link" href="https://claude.com/blog/connectors-for-everyday-life" target="_blank">Read: New connectors in Claude for everyday life →</a>
+            </div>
           </div>
         </div>
       </div>
@@ -401,53 +296,177 @@ tailwind.config = {
   </div>
 </section>
 
-<!-- Contact -->
-<section id="contact" class="section-entrance dark-section py-32 lg:py-40">
-  <div class="w-full max-w-[1000px] mx-auto px-6 md:px-12 text-center">
-    <h2 style="font-size:clamp(48px,7vw,100px); font-weight:500; line-height:0.92; letter-spacing:-2px; margin:0; text-transform:uppercase;">
-      LET'S BUILD<br/>SOMETHING
-    </h2>
-    <p class="mt-8 text-base" style="font-weight:500; max-width:500px; margin-left:auto; margin-right:auto; font-family:'Helvetica Neue',Arial,'PingFang SC','Noto Sans SC',sans-serif;">
-      Got a project, an idea, or just want to say hi? My inbox is always open.
-    </p>
-    <div class="mt-12 flex flex-col md:flex-row items-center justify-center gap-5">
-      <a href="mailto:aria.chen@example.com"
-         class="brutal-btn text-lg"
-         style="background:#F5F4F2; color:#1A1817; border-color:#F5F4F2;">
-        SAY HELLO
-      </a>
-      <a href="#"
-         class="brutal-btn text-lg"
-         style="border-color:#F5F4F2; color:#F5F4F2;">
-        DOWNLOAD CV
-      </a>
+<!-- 02: MATTERS (DARK) -->
+<div id="matters" class="page-wrap"></div>
+<section class="section-dark">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num" style="color:#A69E95;">02</span>
+      <h2 class="display-md section-title" style="color:#F5F4F2;">MATTERS · 议题</h2>
+    </div>
+    <div class="b4" style="border-color:#3D3833;">
+      <div class="matters-grid">
+        <div class="matter-item">
+          <div class="matter-topic">Claude 开始「做梦」——空闲时自我检查记忆并修剪矛盾</div>
+          <div class="matter-context" style="color:#A69E95;">Peter Yang 总结 Alex Albert 访谈：当 agent 不在执行任务时，会回顾自身记忆、发现矛盾并修剪——这个源自睡眠中记忆处理的「dreaming」过程，可能是 LLM 自主迭代的关键方向。</div>
+        </div>
+        <div class="matter-item">
+          <div class="matter-topic">Claude 新增日常连接器：从 AllTrails 到 Uber Eats</div>
+          <div class="matter-context" style="color:#A69E95;">连接器目录突破 200 个。Claude 会在对话中动态推荐 —— 从 work tool 向 everyday assistant 的关键一步。</div>
+        </div>
+        <div class="matter-item">
+          <div class="matter-topic">Sam Altman 罕见夸赞 ChatGPT 最新更新「好太多了」</div>
+          <div class="matter-context" style="color:#A69E95;">首次公开承认 GPT-5 有退化问题后，Altman 发推说更新很棒。1.3 万点赞，未透露具体细节。</div>
+        </div>
+        <div class="matter-item">
+          <div class="matter-topic">Everlane 故事：从 Pinterest 竞品到破产再到品牌重生</div>
+          <div class="matter-context" style="color:#A69E95;">Linear 产品负责人 Nan Yu 回顾：疫情摧毁了 Everlane 的「通勤装」市场，但 J.Crew、Madewell 都曾死过又重生——品牌的生命力超出想象。</div>
+        </div>
+        <div class="matter-item">
+          <div class="matter-topic">Agent 评估的终极形态：只剩「结果」和「预算」两个参数</div>
+          <div class="matter-context" style="color:#A69E95;">Anthropic 平台团队：一切最终压缩为「可验证的结果」和「预算」两个维度，其余全部由平台自动优化。</div>
+        </div>
+        <div class="matter-item">
+          <div class="matter-topic">多 agent 架构开始分化——不同任务需要不同排列组合</div>
+          <div class="matter-context" style="color:#A69E95;">Anthropic 观察到 advisor strategy、adversarial generation、分治组合各有专长。关键是把基础设施做成乐高式的。</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
-<footer class="dark-section py-12" style="border-top:4px solid #3D3833;">
-  <div class="w-full max-w-[1600px] mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
-    <p class="text-xs uppercase tracking-[0.15em] m-0" style="font-weight:500; color:#A69E95;">© 2026 ARIA CHEN</p>
-    <div class="flex items-center gap-8">
-      <a href="#" class="text-sm uppercase tracking-[0.1em] text-white no-underline brutal-link" style="border-bottom-color:transparent;">Twitter</a>
-      <a href="#" class="text-sm uppercase tracking-[0.1em] text-white no-underline brutal-link" style="border-bottom-color:transparent;">Dribbble</a>
-      <a href="#" class="text-sm uppercase tracking-[0.1em] text-white no-underline brutal-link" style="border-bottom-color:transparent;">GitHub</a>
+<!-- 03: SOURCES -->
+<div id="sources" class="page-wrap" style="border-top:var(--stroke) solid var(--border);"></div>
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2 class="display-md section-title">SOURCES · 原文</h2>
     </div>
-  </div>
-</footer>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.section-entrance').forEach(el => observer.observe(el));
-});
-</script>
-</body>
-</html>
+    <div class="source-group">
+      <div class="source-group-header">
+        <span class="source-type-badge label">BLOG</span>
+        <div>
+          <div class="source-title"><a href="https://www.anthropic.com/engineering/april-23-postmortem" target="_blank">An update on recent Claude Code quality reports</a></div>
+          <div class="source-url"><a href="https://www.anthropic.com/engineering/april-23-postmortem" target="_blank">anthropic.com</a></div>
+        </div>
+      </div>
+      <div class="source-desc">Anthropic postmortem 详细回顾了 Claude Code「变笨」的三大原因。已在 April 20 全部修复。未来将加强系统 prompt 变更的逐行 ablated eval。</div>
+    </div>
+
+    <div class="source-group">
+      <div class="source-group-header">
+        <span class="source-type-badge label">BLOG</span>
+        <div>
+          <div class="source-title"><a href="https://claude.com/blog/connectors-for-everyday-life" target="_blank">New connectors in Claude for everyday life</a></div>
+          <div class="source-url"><a href="https://claude.com/blog/connectors-for-everyday-life" target="_blank">claude.com</a></div>
+        </div>
+      </div>
+      <div class="source-desc">新增 AllTrails、Uber、Spotify 等 200+ 日常连接器。Claude 可在对话中智能推荐。无广告无付费推荐。</div>
+    </div>
+
+    <div class="source-group">
+      <div class="source-group-header">
+        <span class="source-type-badge label">BLOG</span>
+        <div>
+          <div class="source-title"><a href="https://claude.com/blog/claude-managed-agents-memory" target="_blank">Built-in memory for Claude Managed Agents</a></div>
+          <div class="source-url"><a href="https://claude.com/blog/claude-managed-agents-memory" target="_blank">claude.com</a></div>
+        </div>
+      </div>
+      <div class="source-desc">跨 session 记忆公测。文件系统存储，支持审计、版本回滚、API 管理。Netflix、Rakuten 已在用。</div>
+    </div>
+
+    <div class="source-group">
+      <div class="source-group-header">
+        <span class="source-type-badge label">PODCAST</span>
+        <div>
+          <div class="source-title"><a href="https://www.youtube.com/watch?v=lLypHkIVLqc" target="_blank">The Secrets of Claude's Platform</a></div>
+          <div class="source-url"><a href="https://www.youtube.com/watch?v=lLypHkIVLqc" target="_blank">AI &amp; I by Every</a></div>
+        </div>
+      </div>
+      <div class="podcast-summary">
+        Anthropic 正在从「completion endpoint」进化到完整 agent 平台。未来用户只需定义「结果」和「预算」，剩下由 Claude 自动决定。
+        <div class="quote">"In its advanced shape, we want to make it so you can deploy these agents really easily... maybe even just telling Claude 'add Slack', and it just handles absolutely everything." — Angela</div>
+      </div>
+    </div>
+
+    <!-- TWEETS -->
+    <div class="source-group">
+      <div class="builder-header">
+        <div class="builder-name">Swyx (swyx)</div>
+        <div class="builder-bio">@dxtipshq · @cognition · @temporalio</div>
+      </div>
+      <div class="source-tweet">
+        <div class="tweet-text">taking bets for vercel and supabase rn</div>
+        <div class="tweet-meta"><a href="https://x.com/swyx/status/2056626964090466469" target="_blank">View on X →</a></div>
+      </div>
+      <div class="source-tweet">
+        <div class="tweet-text">this seems quite doable in the space of a single 2-3 hour workshop — any brave soul want to try to livecode this for people as a learning exercise?</div>
+        <div class="tweet-meta"><a href="https://x.com/swyx/status/2056478391008977404" target="_blank">View on X →</a></div>
+      </div>
+    </div>
+
+    <div class="source-group">
+      <div class="builder-header">
+        <div class="builder-name">Peter Yang (petergyang)</div>
+        <div class="builder-bio">Product at Roblox, AI tutorials</div>
+      </div>
+      <div class="source-tweet">
+        <div class="tweet-text">我的 5 大 takeaways 来自 Alex Albert 关于 Anthropic 构建下一代 Claude 的访谈：1) 模型和马具要一起设计；2) Claude 开始在空闲时「做梦」；3) Eval 应聚焦真实用户问题；4) 有一群全职研究员在思考 Claude 的意识；5) Anthropic 的写作文化为 Claude 提供了大量可检索上下文。</div>
+        <div class="tweet-meta"><a href="https://x.com/petergyang/status/2056381822733595090" target="_blank">View on X →</a></div>
+      </div>
+    </div>
+
+    <div class="source-group">
+      <div class="builder-header">
+        <div class="builder-name">Nan Yu (thenanyu)</div>
+        <div class="builder-bio">Head of Product @Linear</div>
+      </div>
+      <div class="source-tweet">
+        <div class="tweet-text">I haven't worked at Everlane in almost 10 years but it's a pretty sad day for the people that built it. Ultimately, what did it in was the pandemic — Everlane was mainly wear-to-work and that market basically disappeared overnight.</div>
+        <div class="tweet-meta"><a href="https://x.com/thenanyu/status/2056407656898896214" target="_blank">View on X →</a></div>
+      </div>
+    </div>
+
+    <div class="source-group">
+      <div class="builder-header">
+        <div class="builder-name">Thariq (trq212)</div>
+        <div class="builder-bio">Claude Code @AnthropicAI · prev YC W20</div>
+      </div>
+      <div class="source-tweet">
+        <div class="tweet-text">continuing my HTML era, I had so much fun talking with Claire at Code w/ Claude about staying in the loop with long running agents</div>
+        <div class="tweet-meta"><a href="https://x.com/trq212/status/2056432663125545082" target="_blank">View on X →</a></div>
+      </div>
+    </div>
+
+    <div class="source-group">
+      <div class="builder-header">
+        <div class="builder-name">Zara Zhang (zarazhangrui)</div>
+        <div class="builder-bio">AI x Product @Cognition · follow-builders author</div>
+      </div>
+      <div class="source-tweet">
+        <div class="tweet-text">Looking to collaborate with builders exploring agentic workflows — especially context management for agents. If you're in the Bay Area would love to invite you to demo.</div>
+        <div class="tweet-meta"><a href="https://x.com/zarazhangrui/status/2056464721549926414" target="_blank">View on X →</a></div>
+      </div>
+    </div>
+
+    <div class="source-group">
+      <div class="builder-header">
+        <div class="builder-name">Nikunj Kothari (nikunj)</div>
+        <div class="builder-bio">Partner @FPVventures</div>
+      </div>
+      <div class="source-tweet">
+        <div class="tweet-text">"Writes bangers on X, but terrible board member" — too many investors are trading dopamine for service nowadays. Work hard for your founders. That's the only "moat" that'll compound.</div>
+        <div class="tweet-meta"><a href="https://x.com/nikunj/status/2056363681798410592" target="_blank">View on X →</a></div>
+      </div>
+    </div>
+
+    <div class="source-group">
+      <div class="builder-header">
+        <div class="builder-name">Dan Shipper (danshipper)</div>
+        <div class="builder-bio">CEO @Every</div>
+      </div>
+      <div class="source-tweet">
+        <div class="tweet-text">we'll be publishing a complete guide to Codex soon on @every — get notified when it's out</div>
+        <div class="tweet-meta"><a href="https://x.com/danshipper
