@@ -3,52 +3,53 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Aria Chen — Writer & Designer</title>
-<script src="https://cdn.jsdelivr.net/npm/@paper-design/shaders-react@1.5.0/dist/index.umd.js"></script>
+<title>ARIA CHEN — PORTFOLIO</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
     extend: {
       colors: {
-        background: '#F7F3EE',
-        foreground: '#2C2824',
-        card: '#F0EAE3',
-        'card-foreground': '#2C2824',
-        muted: '#EBE3D9',
-        'muted-foreground': '#7A6F64',
-        secondary: '#EBE3D9',
-        'secondary-foreground': '#4D453E',
-        primary: '#2C2824',
-        'primary-foreground': '#F7F3EE',
-        border: '#D5CBC0',
-        input: '#D5CBC0',
-        ring: '#7A6F64',
+        background: '#F5F4F2',
+        foreground: '#1A1817',
+        card: '#ECEAE7',
+        'card-foreground': '#1A1817',
+        muted: '#E3E0DB',
+        'muted-foreground': '#6B645D',
+        secondary: '#E3E0DB',
+        'secondary-foreground': '#3D3833',
+        primary: '#1A1817',
+        'primary-foreground': '#F5F4F2',
+        border: '#C8C1B9',
+        input: '#C8C1B9',
+        ring: '#6B645D',
+        accent: '#1A1817',
       },
     },
   },
 }
 </script>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
   :root {
-    --stroke: 0.5px;
-    --radius: 6px;
-    --font-family: "Fraunces", Georgia, "Noto Serif SC", "Songti SC", serif;
-    --background: #F7F3EE;
-    --foreground: #2C2824;
-    --card: #F0EAE3;
-    --card-foreground: #2C2824;
-    --muted: #EBE3D9;
-    --muted-foreground: #7A6F64;
-    --secondary: #EBE3D9;
-    --secondary-foreground: #4D453E;
-    --primary: #2C2824;
-    --primary-foreground: #F7F3EE;
-    --border: #D5CBC0;
-    --input: #D5CBC0;
-    --ring: #7A6F64;
+    --stroke: 4px;
+    --radius: 0px;
+    --font-family: "Bebas Neue", "Helvetica Neue", Impact, "Source Han Sans SC", "PingFang SC", sans-serif;
+    --background: #F5F4F2;
+    --foreground: #1A1817;
+    --card: #ECEAE7;
+    --card-foreground: #1A1817;
+    --muted: #E3E0DB;
+    --muted-foreground: #6B645D;
+    --secondary: #E3E0DB;
+    --secondary-foreground: #3D3833;
+    --primary: #1A1817;
+    --primary-foreground: #F5F4F2;
+    --border: #C8C1B9;
+    --input: #C8C1B9;
+    --ring: #6B645D;
+    --accent: #1A1817;
   }
 
   *, *::before, *::after { box-sizing: border-box; }
@@ -61,12 +62,13 @@ tailwind.config = {
   .no-scrollbar::-webkit-scrollbar { display: none; }
 
   body, * { font-family: var(--font-family); }
+  body { font-weight: 500; }
 
   html { scroll-behavior: smooth; }
 
   .section-entrance {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(24px);
     transition: opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1),
                 transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
@@ -75,352 +77,377 @@ tailwind.config = {
     transform: translateY(0);
   }
 
-  .nav-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 100%;
-    height: var(--stroke);
-    background: var(--foreground);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  .brutal-border {
+    border: var(--stroke) solid var(--border);
   }
-  .nav-link:hover::after { transform: scaleX(1); }
 
-  .hover-fade { transition: opacity 0.3s ease; }
-  .hover-fade:hover { opacity: 0.88; }
+  .brutal-tag {
+    display: inline-block;
+    padding: 6px 16px;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    background: var(--muted);
+    border: var(--stroke) solid var(--border);
+  }
 
-  .hover-underline {
+  .brutal-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 12px 32px;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     text-decoration: none;
-    background-image: linear-gradient(transparent calc(100% - 1px), var(--foreground) 1px);
-    background-repeat: no-repeat;
-    background-size: 0% 100%;
-    transition: background-size 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: var(--stroke) solid var(--foreground);
+    transition: all 0.15s ease;
   }
-  .hover-underline:hover {
-    background-size: 100% 100%;
+  .brutal-btn-primary {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+  .brutal-btn-outline {
+    background: transparent;
+    color: var(--foreground);
+  }
+  .brutal-btn:hover {
+    background: var(--foreground);
+    color: var(--primary-foreground);
+  }
+  .brutal-btn-outline:hover {
+    background: var(--foreground);
+    color: var(--background);
+  }
+
+  .brutal-link {
+    text-decoration: none;
+    color: var(--foreground);
+    border-bottom: var(--stroke) solid transparent;
+    transition: border-color 0.2s ease;
+    padding-bottom: 2px;
+  }
+  .brutal-link:hover {
+    border-bottom-color: var(--foreground);
+  }
+
+  .img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .dark-section {
+    background: #1A1817;
+    color: #F5F4F2;
+  }
+  .dark-section .text-muted-foreground {
+    color: #A69E95;
   }
 </style>
 </head>
-<body class="bg-background text-foreground antialiased">
+<body class="bg-background text-foreground">
 
 <!-- Nav -->
-<nav class="fixed top-0 w-full z-50 h-16 md:h-20 flex items-center" style="background: rgba(247,243,238,0.95); backdrop-filter: blur(8px); border-bottom: var(--stroke) solid var(--border);">
-  <div class="w-full max-w-[1280px] mx-auto px-5 md:px-10 flex items-center justify-between">
-    <span class="text-xs tracking-[0.15em]" style="font-weight:300;">Aria Chen</span>
-    <div class="hidden md:flex items-center gap-8">
-      <a href="#writing" class="relative text-xs no-underline nav-link" style="font-weight:300;">Writing</a>
-      <a href="#work" class="relative text-xs no-underline nav-link" style="font-weight:300;">Work</a>
-      <a href="#about" class="relative text-xs no-underline nav-link" style="font-weight:300;">About</a>
-      <a href="#reading" class="relative text-xs no-underline nav-link" style="font-weight:300;">Reading</a>
-      <a href="#contact" class="relative text-xs no-underline nav-link" style="font-weight:300;">Contact</a>
+<nav class="fixed top-0 w-full z-50 h-20 flex items-center bg-background/95 backdrop-blur-sm"
+     style="border-bottom: var(--stroke) solid var(--border);">
+  <div class="w-full max-w-[1600px] mx-auto px-6 md:px-12 flex items-center justify-between">
+    <span class="text-xl tracking-[0.12em]" style="font-weight:500;">ARIA CHEN</span>
+    <div class="hidden md:flex items-center gap-10">
+      <a href="#work" class="text-lg tracking-[0.1em] no-underline brutal-link" style="font-weight:500;">WORK</a>
+      <a href="#writing" class="text-lg tracking-[0.1em] no-underline brutal-link" style="font-weight:500;">WRITING</a>
+      <a href="#about" class="text-lg tracking-[0.1em] no-underline brutal-link" style="font-weight:500;">ABOUT</a>
+      <a href="#contact" class="text-lg tracking-[0.1em] no-underline brutal-link" style="font-weight:500;">CONTACT</a>
     </div>
-    <button class="md:hidden text-xs bg-transparent px-3 py-2"
-      style="border: var(--stroke) solid var(--border); border-radius: var(--radius); font-weight:300; min-height:40px;">Menu</button>
   </div>
 </nav>
 
 <!-- Hero -->
-<section id="hero" style="min-height:90vh; position:relative; overflow:hidden; background-color: var(--background); display:flex; align-items:center;">
-  <div id="hero-shader" style="position:absolute; inset:0; width:100%; height:100%;"></div>
-  <div style="position:relative; z-index:1; width:100%;">
-    <div class="w-full max-w-[1280px] mx-auto px-5 md:px-10">
-      <div style="max-width:680px;">
-        <p class="text-sm mb-6 text-muted-foreground italic" style="font-weight:300;">product designer · writer · curious human</p>
-        <h1 style="font-size:clamp(40px,5vw,80px); font-weight:300; line-height:1.15; letter-spacing:-0.5px; margin:0; font-style:italic;" class="text-foreground">
-          I build things<br/>that feel right.
+<section id="hero" style="min-height:100vh; position:relative; display:flex; align-items:center; background: var(--background);">
+  <div class="w-full max-w-[1600px] mx-auto px-6 md:px-12" style="padding-top:80px; padding-bottom:60px;">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+      <div style="max-width:640px;">
+        <p class="text-sm tracking-[0.15em] mb-6 text-muted-foreground" style="font-weight:500;">PRODUCT DESIGNER · BEIJING</p>
+        <h1 style="font-size:clamp(60px,8vw,120px); font-weight:500; line-height:0.92; letter-spacing:-2px; margin:0; text-transform:uppercase;">
+          I MAKE<br/>THINGS<br/>THAT WORK
         </h1>
-        <p class="mt-6 text-sm text-muted-foreground" style="font-weight:300; max-width:520px; line-height:1.7;">
-          Over the past six years, I've designed digital products for startups and enterprise — from AI tools to complex dashboards. I also write about design, technology, and the moments in between.
+        <p class="mt-8 text-base text-muted-foreground" style="font-weight:500; max-width:440px; line-height:1.5; font-family:'Helvetica Neue',Arial,'PingFang SC','Noto Sans SC',sans-serif;">
+          Six years designing for startups and enterprise. AI tools, dashboards, and products used by millions.
         </p>
-        <div class="mt-10 flex gap-4">
-          <a href="#writing"
-            class="px-6 py-3 text-sm bg-primary text-primary-foreground no-underline inline-flex items-center"
-            style="border-radius:var(--radius); font-weight:300; min-height:44px;">
-            Read my writing
-          </a>
-          <a href="#work"
-            class="px-6 py-3 text-sm bg-transparent no-underline inline-flex items-center"
-            style="border:var(--stroke) solid var(--border); border-radius:var(--radius); font-weight:300; min-height:44px;">
-            See my work
-          </a>
+        <div class="mt-10 flex gap-5">
+          <a href="#work" class="brutal-btn brutal-btn-primary">VIEW WORK</a>
+          <a href="#writing" class="brutal-btn brutal-btn-outline">READ NOTES</a>
         </div>
+      </div>
+      <div class="relative aspect-square lg:aspect-auto lg:h-[70vh] brutal-border overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1567095761054-7a02e69e5c43?w=900&q=80&auto=format&fit=crop"
+             alt="Studio workspace"
+             class="img-cover" />
       </div>
     </div>
   </div>
 </section>
 
-<!-- Writing / Journal -->
-<section id="writing" class="section-entrance py-32 md:py-40">
-  <div class="w-full max-w-[1280px] mx-auto px-5 md:px-10">
-    <p class="text-xs mb-2 text-muted-foreground" style="font-weight:300;">— Notebook</p>
-    <h2 style="font-size:clamp(24px,3vw,40px); font-weight:300; line-height:1.2; margin:0; max-width:600px;">
-      Notes on design,<br/>technology, and the spaces<br/>between them.
+<!-- Work -->
+<section id="work" class="section-entrance py-32 lg:py-40">
+  <div class="w-full max-w-[1600px] mx-auto px-6 md:px-12">
+    <p class="text-sm tracking-[0.15em] mb-3 text-muted-foreground" style="font-weight:500;">— SELECTED PROJECTS</p>
+    <h2 style="font-size:clamp(40px,5vw,72px); font-weight:500; line-height:0.95; letter-spacing:-1px; margin:0; text-transform:uppercase;">
+      THINGS I'VE<br/>BUILT AND SHIPPED
     </h2>
 
-    <div class="mt-16 space-y-12">
-      <!-- Essay 1 -->
-      <div class="group" style="max-width:640px;">
-        <span class="text-xs text-muted-foreground" style="font-weight:300;">May 12, 2026</span>
-        <h3 class="mt-2 m-0 text-lg" style="font-weight:300;">
-          <a href="#" class="text-foreground no-underline hover-underline">On the invisible craft of AI interfaces</a>
-        </h3>
-        <p class="mt-3 m-0 text-sm text-muted-foreground" style="font-weight:300; line-height:1.7;">
-          The best AI interactions don't feel like talking to a machine. They feel like extension — of thought, of intention. But getting there requires a kind of restraint that's counterintuitive for product designers...
-        </p>
-        <a href="#" class="mt-3 inline-block text-xs text-foreground no-underline hover-underline" style="font-weight:300;">Continue reading</a>
+    <!-- Work item 1 -->
+    <div class="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div class="aspect-[4/3] brutal-border overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80&auto=format&fit=crop" alt="Bitable AI" class="img-cover" />
       </div>
-
-      <!-- Essay 2 -->
-      <div class="group" style="max-width:640px;">
-        <span class="text-xs text-muted-foreground" style="font-weight:300;">April 28, 2026</span>
-        <h3 class="mt-2 m-0 text-lg" style="font-weight:300;">
-          <a href="#" class="text-foreground no-underline hover-underline">What spreadsheets taught me about systems thinking</a>
-        </h3>
-        <p class="mt-3 m-0 text-sm text-muted-foreground" style="font-weight:300; line-height:1.7;">
-          Working on a spreadsheet product for years, I've come to see them not as tools for numbers, but as canvases for structure. Every grid tells a story about how someone organizes their world...
+      <div>
+        <span class="brutal-tag text-xs tracking-[0.12em]">FEISHU · 2025</span>
+        <h3 class="mt-8 text-2xl tracking-[0.05em] uppercase" style="font-weight:500;">Bitable AI Copilot</h3>
+        <p class="mt-4 text-sm leading-relaxed text-muted-foreground" style="font-weight:400; font-family:'Helvetica Neue',Arial,'PingFang SC','Noto Sans SC',sans-serif;">
+          Natural language interface for spreadsheet operations. Users can ask questions and perform complex operations in plain language. Task completion time reduced by 47%.
         </p>
-        <a href="#" class="mt-3 inline-block text-xs text-foreground no-underline hover-underline" style="font-weight:300;">Continue reading</a>
-      </div>
-
-      <!-- Essay 3 -->
-      <div class="group" style="max-width:640px;">
-        <span class="text-xs text-muted-foreground" style="font-weight:300;">March 15, 2026</span>
-        <h3 class="mt-2 m-0 text-lg" style="font-weight:300;">
-          <a href="#" class="text-foreground no-underline hover-underline">Notes on constraint-led creativity</a>
-        </h3>
-        <p class="mt-3 m-0 text-sm text-muted-foreground" style="font-weight:300; line-height:1.7;">
-          I used to think constraints were obstacles. Now I think they're the only thing that makes good work possible. A blank page is paralyzing. A well-defined boundary is liberating...
-        </p>
-        <a href="#" class="mt-3 inline-block text-xs text-foreground no-underline hover-underline" style="font-weight:300;">Continue reading</a>
+        <a href="#" class="mt-6 inline-block brutal-link text-sm tracking-[0.12em] uppercase" style="font-weight:500;">CASE STUDY →</a>
       </div>
     </div>
 
-    <a href="#" class="mt-12 inline-block text-sm text-foreground no-underline hover-underline" style="font-weight:300;">View all notes →</a>
+    <!-- Work item 2 -->
+    <div class="mt-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div class="aspect-[4/3] brutal-border overflow-hidden lg:order-2">
+        <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=80&auto=format&fit=crop" alt="Dashboard" class="img-cover" />
+      </div>
+      <div class="lg:order-1">
+        <span class="brutal-tag text-xs tracking-[0.12em]">ENTERPRISE · 2024</span>
+        <h3 class="mt-8 text-2xl tracking-[0.05em] uppercase" style="font-weight:500;">Analytics Dashboard</h3>
+        <p class="mt-4 text-sm leading-relaxed text-muted-foreground" style="font-weight:400; font-family:'Helvetica Neue',Arial,'PingFang SC','Noto Sans SC',sans-serif;">
+          Real-time data visualization platform built for 50,000+ enterprise users. Designed for clarity and performance at scale.
+        </p>
+        <a href="#" class="mt-6 inline-block brutal-link text-sm tracking-[0.12em] uppercase" style="font-weight:500;">CASE STUDY →</a>
+      </div>
+    </div>
+
+    <!-- Work item 3 -->
+    <div class="mt-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div class="aspect-[4/3] brutal-border overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=800&q=80&auto=format&fit=crop" alt="Flow" class="img-cover" />
+      </div>
+      <div>
+        <span class="brutal-tag text-xs tracking-[0.12em]">MOBILE · 2023</span>
+        <h3 class="mt-8 text-2xl tracking-[0.05em] uppercase" style="font-weight:500;">Flow — Task Manager</h3>
+        <p class="mt-4 text-sm leading-relaxed text-muted-foreground" style="font-weight:400; font-family:'Helvetica Neue',Arial,'PingFang SC','Noto Sans SC',sans-serif;">
+          Minimalist task management app shipped on iOS and Android. Rated 4.8 stars with over 200K downloads.
+        </p>
+        <a href="#" class="mt-6 inline-block brutal-link text-sm tracking-[0.12em] uppercase" style="font-weight:500;">CASE STUDY →</a>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- Selected Work -->
-<section id="work" class="section-entrance py-32 md:py-40" style="background: var(--card);">
-  <div class="w-full max-w-[1280px] mx-auto px-5 md:px-10">
-    <p class="text-xs mb-2 text-muted-foreground" style="font-weight:300;">— Selected Work</p>
-    <h2 style="font-size:clamp(24px,3vw,40px); font-weight:300; line-height:1.2; margin:0;">Projects I've had<br/>the privilege to shape.</h2>
-
-    <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2" style="gap:8px;">
-
-      <div class="group">
-        <div class="overflow-hidden" style="border-radius:var(--radius);">
-          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&q=80&auto=format&fit=crop" alt="Bitable AI" class="block w-full hover-fade" />
-        </div>
-        <div class="mt-4">
-          <h3 class="m-0 text-base" style="font-weight:300;">Bitable AI Copilot</h3>
-          <p class="mt-1 m-0 text-sm text-muted-foreground" style="font-weight:300;">Feishu · 2025</p>
-          <p class="mt-2 m-0 text-sm text-muted-foreground" style="font-weight:300; line-height:1.6;">Natural language interface for spreadsheets. Task completion time dropped by 47%.</p>
-        </div>
+<!-- Stats — Dark Section (one dark section allowed) -->
+<section class="section-entrance dark-section py-28 lg:py-36">
+  <div class="w-full max-w-[1600px] mx-auto px-6 md:px-12">
+    <div class="grid grid-cols-2 lg:grid-cols-4" style="gap:0; border:4px solid #3D3833;">
+      <div class="px-8 py-14 text-center" style="border-right:4px solid #3D3833;">
+        <div class="text-6xl lg:text-7xl tracking-tight" style="font-weight:500; line-height:0.9;">6+</div>
+        <div class="text-sm mt-4 uppercase tracking-[0.15em]" style="font-weight:500; color:#A69E95;">Years</div>
       </div>
-
-      <div class="group">
-        <div class="overflow-hidden" style="border-radius:var(--radius);">
-          <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&q=80&auto=format&fit=crop" alt="Analytics Dashboard" class="block w-full hover-fade" />
-        </div>
-        <div class="mt-4">
-          <h3 class="m-0 text-base" style="font-weight:300;">Analytics Dashboard</h3>
-          <p class="mt-1 m-0 text-sm text-muted-foreground" style="font-weight:300;">Enterprise · 2024</p>
-          <p class="mt-2 m-0 text-sm text-muted-foreground" style="font-weight:300; line-height:1.6;">Real-time data visualization serving 50K+ enterprise users.</p>
-        </div>
+      <div class="px-8 py-14 text-center" style="border-right:4px solid #3D3833;">
+        <div class="text-6xl lg:text-7xl tracking-tight" style="font-weight:500; line-height:0.9;">30+</div>
+        <div class="text-sm mt-4 uppercase tracking-[0.15em]" style="font-weight:500; color:#A69E95;">Projects</div>
       </div>
-
-      <div class="group">
-        <div class="overflow-hidden" style="border-radius:var(--radius);">
-          <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=600&q=80&auto=format&fit=crop" alt="Flow" class="block w-full hover-fade" />
-        </div>
-        <div class="mt-4">
-          <h3 class="m-0 text-base" style="font-weight:300;">Flow — Task Manager</h3>
-          <p class="mt-1 m-0 text-sm text-muted-foreground" style="font-weight:300;">Mobile · 2023</p>
-          <p class="mt-2 m-0 text-sm text-muted-foreground" style="font-weight:300; line-height:1.6;">Minimalist tool shipped on iOS and Android with a 4.8-star rating.</p>
-        </div>
+      <div class="px-8 py-14 text-center" style="border-right:4px solid #3D3833;">
+        <div class="text-6xl lg:text-7xl tracking-tight" style="font-weight:500; line-height:0.9;">12</div>
+        <div class="text-sm mt-4 uppercase tracking-[0.15em]" style="font-weight:500; color:#A69E95;">Awards</div>
       </div>
-
+      <div class="px-8 py-14 text-center">
+        <div class="text-6xl lg:text-7xl tracking-tight" style="font-weight:500; line-height:0.9;">500K+</div>
+        <div class="text-sm mt-4 uppercase tracking-[0.15em]" style="font-weight:500; color:#A69E95;">Users</div>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- Images / Gallery spread -->
+<section class="section-entrance py-20 lg:py-28">
+  <div class="w-full max-w-[1600px] mx-auto px-6 md:px-12">
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-2">
+      <div class="aspect-square brutal-border overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&q=80&auto=format&fit=crop" class="img-cover" alt="" />
+      </div>
+      <div class="aspect-square brutal-border overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=500&q=80&auto=format&fit=crop" class="img-cover" alt="" />
+      </div>
+      <div class="aspect-square brutal-border overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&q=80&auto=format&fit=crop" class="img-cover" alt="" />
+      </div>
+      <div class="aspect-square brutal-border overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=500&q=80&auto=format&fit=crop" class="img-cover" alt="" />
+      </div>
+      <div class="aspect-square brutal-border overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1567095761054-7a02e69e5c43?w=500&q=80&auto=format&fit=crop" class="img-cover" alt="" />
+      </div>
+      <div class="aspect-square brutal-border overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&q=80&auto=format&fit=crop" class="img-cover" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Writing -->
+<section id="writing" class="section-entrance py-32 lg:py-40">
+  <div class="w-full max-w-[1600px] mx-auto px-6 md:px-12">
+    <p class="text-sm tracking-[0.15em] mb-3 text-muted-foreground" style="font-weight:500;">— JOURNAL</p>
+    <h2 style="font-size:clamp(40px,5vw,72px); font-weight:500; line-height:0.95; letter-spacing:-1px; margin:0; text-transform:uppercase;">
+      NOTES ON DESIGN<br/>& THE WORLD
+    </h2>
+
+    <div class="mt-16 space-y-16">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 brutal-border p-8 lg:p-12 bg-background">
+        <div class="lg:col-span-1">
+          <p class="text-sm text-muted-foreground" style="font-weight:500;">MAY 12, 2026</p>
+          <p class="mt-4 text-xs uppercase tracking-[0.12em] bg-muted brutal-link px-3 py-1 inline-block" style="">← DESIGN · AI</p>
+        </div>
+        <div class="lg:col-span-2">
+          <h3 class="text-xl tracking-[0.03em] uppercase" style="font-weight:500;">On the Invisible Craft of AI Interfaces</h3>
+          <p class="mt-4 text-sm leading-relaxed text-muted-foreground" style="font-weight:400; font-family:'Helvetica Neue',Arial,'PingFang SC','Noto Sans SC',sans-serif;">
+            The best AI interactions don't feel like talking to a machine. They feel like extension — of thought, of intention. But getting there requires a kind of restraint that's counterintuitive for product designers. We're so used to making things visible, legible, explicit. But good AI is invisible. It anticipates. It stays out of the way.
+          </p>
+          <a href="#" class="mt-4 inline-block brutal-link text-sm tracking-[0.12em] uppercase" style="font-weight:500;">Read full essay →</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 brutal-border p-8 lg:p-12 bg-background">
+        <div class="lg:col-span-1">
+          <p class="text-sm text-muted-foreground" style="font-weight:500;">APR 28, 2026</p>
+          <p class="mt-4 text-xs uppercase tracking-[0.12em] bg-muted brutal-link px-3 py-1 inline-block">← SYSTEMS · PRODUCT</p>
+        </div>
+        <div class="lg:col-span-2">
+          <h3 class="text-xl tracking-[0.03em] uppercase" style="font-weight:500;">What Spreadsheets Taught Me About Systems Thinking</h3>
+          <p class="mt-4 text-sm leading-relaxed text-muted-foreground" style="font-weight:400; font-family:'Helvetica Neue',Arial,'PingFang SC','Noto Sans SC',sans-serif;">
+            I've spent years working on a spreadsheet product. Not the most glamorous job, but it taught me something profound: every grid is a model of how someone thinks. The columns are their categories. The rows are their cases. The formulas are their logic.
+          </p>
+          <a href="#" class="mt-4 inline-block brutal-link text-sm tracking-[0.12em] uppercase" style="font-weight:500;">Read full essay →</a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 brutal-border p-8 lg:p-12 bg-background">
+        <div class="lg:col-span-1">
+          <p class="text-sm text-muted-foreground" style="font-weight:500;">MAR 15, 2026</p>
+          <p class="mt-4 text-xs uppercase tracking-[0.12em] bg-muted brutal-link px-3 py-1 inline-block">← CREATIVITY · CRAFT</p>
+        </div>
+        <div class="lg:col-span-2">
+          <h3 class="text-xl tracking-[0.03em] uppercase" style="font-weight:500;">Notes on Constraint-Led Creativity</h3>
+          <p class="mt-4 text-sm leading-relaxed text-muted-foreground" style="font-weight:400; font-family:'Helvetica Neue',Arial,'PingFang SC','Noto Sans SC',sans-serif;">
+            I used to think constraints were obstacles. Now I think they're the only thing that makes good work possible. A blank page is paralyzing. A well-defined boundary — in budget, time, or technology — forces decisions. And decisions are what design is made of.
+          </p>
+          <a href="#" class="mt-4 inline-block brutal-link text-sm tracking-[0.12em] uppercase" style="font-weight:500;">Read full essay →</a>
+        </div>
+      </div>
+    </div>
+
+    <a href="#" class="mt-16 inline-block brutal-btn brutal-btn-outline text-lg">ALL NOTES</a>
   </div>
 </section>
 
 <!-- About -->
-<section id="about" class="section-entrance py-32 md:py-40">
-  <div class="w-full max-w-[1280px] mx-auto px-5 md:px-10">
-    <p class="text-xs mb-2 text-muted-foreground" style="font-weight:300;">— About</p>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+<section id="about" class="section-entrance py-32 lg:py-40">
+  <div class="w-full max-w-[1600px] mx-auto px-6 md:px-12">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
       <div>
-        <h2 style="font-size:clamp(24px,3vw,40px); font-weight:300; line-height:1.2; margin:0;">
-          I'm Aria. I design<br/>with care, write with<br/>curiosity.
+        <p class="text-sm tracking-[0.15em] mb-3 text-muted-foreground" style="font-weight:500;">— ABOUT</p>
+        <h2 style="font-size:clamp(40px,5vw,72px); font-weight:500; line-height:0.95; letter-spacing:-1px; margin:0; text-transform:uppercase;">
+          HELLO,<br/>I'M ARIA
         </h2>
-        <p class="mt-6 text-sm text-muted-foreground" style="font-weight:300; line-height:1.8;">
-          I grew up in Hangzhou, studied interaction design at Zhejiang University, and now live in Beijing. My career took me from a small YC-backed startup in San Francisco to Alibaba, and now to ByteDance — where I work on Feishu Bitable, a product used by millions.
-        </p>
-        <p class="mt-4 text-sm text-muted-foreground" style="font-weight:300; line-height:1.8;">
-          I believe the best design comes from deep empathy with the people who use it. My approach is grounded in research, refined through prototyping, and validated by real users. I also think designers should write — it clarifies thinking and builds bridges with engineering.
-        </p>
-        <blockquote class="mt-8 pl-5 italic text-sm text-foreground" style="border-left:var(--stroke) solid var(--border); font-weight:300; line-height:1.6;">
-          "Design is not just what it looks like and feels like. Design is how it works."
-          <footer class="mt-2 text-xs text-muted-foreground not-italic" style="font-weight:300;">— Steve Jobs</footer>
-        </blockquote>
-      </div>
-      <div>
-        <div class="grid grid-cols-2 gap-y-10" style="gap:8px;">
-          <div>
-            <p class="text-xs text-muted-foreground mb-2" style="font-weight:300;">Currently</p>
-            <p class="text-sm" style="font-weight:300;">Sr. Product Designer<br/>@ ByteDance</p>
-          </div>
-          <div>
-            <p class="text-xs text-muted-foreground mb-2" style="font-weight:300;">Previously</p>
-            <p class="text-sm" style="font-weight:300;">Alibaba · Rows AI<br/>Studio Dumbar</p>
-          </div>
-          <div>
-            <p class="text-xs text-muted-foreground mb-2" style="font-weight:300;">Education</p>
-            <p class="text-sm" style="font-weight:300;">Zhejiang University<br/>Interaction Design</p>
-          </div>
-          <div>
-            <p class="text-xs text-muted-foreground mb-2" style="font-weight:300;">Elsewhere</p>
-            <p class="text-sm" style="font-weight:300;">
-              <a href="#" class="text-foreground no-underline hover-underline">Twitter</a> ·
-              <a href="#" class="text-foreground no-underline hover-underline">Dribbble</a><br/>
-              <a href="#" class="text-foreground no-underline hover-underline">GitHub</a> ·
-              <a href="#" class="text-foreground no-underline hover-underline">Letterboxd</a>
-            </p>
-          </div>
-          <div>
-            <p class="text-xs text-muted-foreground mb-2" style="font-weight:300;">Tools</p>
-            <p class="text-sm" style="font-weight:300;">Figma · Protopie<br/>Spline · Framer</p>
-          </div>
-          <div>
-            <p class="text-xs text-muted-foreground mb-2" style="font-weight:300;">Coffee</p>
-            <p class="text-sm" style="font-weight:300;">Pour-over, always.<br/>V60 or nothing.</p>
-          </div>
+        <div class="mt-10 aspect-[4/3] brutal-border overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1567095761054-7a02e69e5c43?w=800&q=80&auto=format&fit=crop" alt="Studio" class="img-cover" />
         </div>
       </div>
-    </div>
-  </div>
-</section>
+      <div>
+        <p class="text-sm leading-relaxed" style="font-weight:400; font-family:'Helvetica Neue',Arial,'PingFang SC','Noto Sans SC',sans-serif;">
+          I'm a product designer from Hangzhou, based in Beijing. Studied interaction design at Zhejiang University. Worked at a YC startup in SF, then Alibaba, now ByteDance — designing Feishu Bitable, used by millions.
+        </p>
+        <p class="mt-6 text-sm leading-relaxed" style="font-weight:400; font-family:'Helvetica Neue',Arial,'PingFang SC','Noto Sans SC',sans-serif;">
+          I believe in clarity, craft, and context. Great design is invisible — it disappears into the user's flow. My job is to make the complex feel simple, and the functional feel inevitable.
+        </p>
+        <p class="mt-6 text-sm leading-relaxed text-muted-foreground" style="font-weight:400; font-family:'Helvetica Neue',Arial,'PingFang SC','Noto Sans SC',sans-serif;">
+          Outside of work: pour-over coffee, street photography, and too many books stacked on my nightstand.
+        </p>
 
-<!-- Reading -->
-<section id="reading" class="section-entrance py-32 md:py-40" style="background: var(--card);">
-  <div class="w-full max-w-[1280px] mx-auto px-5 md:px-10">
-    <p class="text-xs mb-2 text-muted-foreground" style="font-weight:300;">— Currently Reading</p>
-    <h2 style="font-size:clamp(24px,3vw,40px); font-weight:300; line-height:1.2; margin:0; max-width:500px;">
-      A few things on my<br/>nightstand right now.
-    </h2>
-
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
-      <div>
-        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=300&q=80&auto=format&fit=crop" alt="Book" class="w-full" style="border-radius:var(--radius);" />
-        <h3 class="mt-4 m-0 text-sm" style="font-weight:300;">The Craft of Research</h3>
-        <p class="mt-1 m-0 text-xs text-muted-foreground" style="font-weight:300;">Booth, Colomb & Williams</p>
-      </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1551029506-0807df4e2031?w=300&q=80&auto=format&fit=crop" alt="Vinyl" class="w-full" style="border-radius:var(--radius);" />
-        <h3 class="mt-4 m-0 text-sm" style="font-weight:300;">On Repeat</h3>
-        <p class="mt-1 m-0 text-xs text-muted-foreground" style="font-weight:300;">Mitski — The Land Is Inhospitable</p>
-      </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1609743522653-52354461eb27?w=300&q=80&auto=format&fit=crop" alt="Film" class="w-full" style="border-radius:var(--radius);" />
-        <h3 class="mt-4 m-0 text-sm" style="font-weight:300;">Recently Watched</h3>
-        <p class="mt-1 m-0 text-xs text-muted-foreground" style="font-weight:300;">Past Lives — dir. Celine Song</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Values / Philosophy -->
-<section class="section-entrance py-28 md:py-36">
-  <div class="w-full max-w-[1280px] mx-auto px-5 md:px-10">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12">
-      <div>
-        <p class="text-xs text-muted-foreground mb-4" style="font-weight:300;">01</p>
-        <h3 class="m-0 text-base" style="font-weight:300;">Clarity over cleverness</h3>
-        <p class="mt-3 text-sm text-muted-foreground" style="font-weight:300; line-height:1.7;">The most elegant solution is the one that disappears. I aim for interfaces that feel inevitable, not impressive.</p>
-      </div>
-      <div>
-        <p class="text-xs text-muted-foreground mb-4" style="font-weight:300;">02</p>
-        <h3 class="m-0 text-base" style="font-weight:300;">Context over opinion</h3>
-        <p class="mt-3 text-sm text-muted-foreground" style="font-weight:300; line-height:1.7;">Every design decision should be traceable back to a user need or a business constraint. Taste is subjective; research is not.</p>
-      </div>
-      <div>
-        <p class="text-xs text-muted-foreground mb-4" style="font-weight:300;">03</p>
-        <h3 class="m-0 text-base" style="font-weight:300;">Craft over speed</h3>
-        <p class="mt-3 text-sm text-muted-foreground" style="font-weight:300; line-height:1.7;">I'd rather ship one well-considered feature than five half-baked ones. Quality compounds in ways velocity never does.</p>
+        <div class="mt-12 grid grid-cols-2 gap-x-12 gap-y-8">
+          <div>
+            <p class="text-xs uppercase tracking-[0.15em] text-muted-foreground" style="font-weight:500;">Currently</p>
+            <p class="mt-2 text-sm uppercase tracking-[0.05em]" style="font-weight:500;">Sr. Product Designer<br/>@ ByteDance</p>
+          </div>
+          <div>
+            <p class="text-xs uppercase tracking-[0.15em] text-muted-foreground" style="font-weight:500;">Previously</p>
+            <p class="mt-2 text-sm uppercase tracking-[0.05em]" style="font-weight:500;">Alibaba<br/>Rows AI<br/>Studio Dumbar</p>
+          </div>
+          <div>
+            <p class="text-xs uppercase tracking-[0.15em] text-muted-foreground" style="font-weight:500;">Education</p>
+            <p class="mt-2 text-sm uppercase tracking-[0.05em]" style="font-weight:500;">Zhejiang University</p>
+          </div>
+          <div>
+            <p class="text-xs uppercase tracking-[0.15em] text-muted-foreground" style="font-weight:500;">Elsewhere</p>
+            <p class="mt-2 text-sm uppercase tracking-[0.05em]" style="font-weight:500;">
+              <a href="#" class="brutal-link">Twitter</a> ·
+              <a href="#" class="brutal-link">Dribbble</a><br/>
+              <a href="#" class="brutal-link">GitHub</a> ·
+              <a href="#" class="brutal-link">Letterboxd</a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Contact -->
-<section id="contact" class="section-entrance py-32 md:py-40">
-  <div class="w-full max-w-[800px] mx-auto px-5 md:px-10 text-center">
-    <p class="text-xs mb-4 text-muted-foreground" style="font-weight:300;">— Get in touch</p>
-    <h2 style="font-size:clamp(24px,3vw,40px); font-weight:300; line-height:1.2; margin:0;">
-      I'd love to hear from you.
+<section id="contact" class="section-entrance dark-section py-32 lg:py-40">
+  <div class="w-full max-w-[1000px] mx-auto px-6 md:px-12 text-center">
+    <h2 style="font-size:clamp(48px,7vw,100px); font-weight:500; line-height:0.92; letter-spacing:-2px; margin:0; text-transform:uppercase;">
+      LET'S BUILD<br/>SOMETHING
     </h2>
-    <p class="mt-4 text-sm text-muted-foreground" style="font-weight:300; line-height:1.7; max-width:480px; margin-left:auto; margin-right:auto;">
-      Whether you have a project in mind, want to collaborate, or just feel like saying hello — my inbox is always open.
+    <p class="mt-8 text-base" style="font-weight:500; max-width:500px; margin-left:auto; margin-right:auto; font-family:'Helvetica Neue',Arial,'PingFang SC','Noto Sans SC',sans-serif;">
+      Got a project, an idea, or just want to say hi? My inbox is always open.
     </p>
-    <div class="mt-10 flex flex-col md:flex-row items-center justify-center gap-4">
+    <div class="mt-12 flex flex-col md:flex-row items-center justify-center gap-5">
       <a href="mailto:aria.chen@example.com"
-        class="px-6 py-3 text-sm bg-primary text-primary-foreground no-underline"
-        style="border-radius:var(--radius); font-weight:300; min-height:44px; display:inline-flex; align-items:center;">
-        Say hello
+         class="brutal-btn text-lg"
+         style="background:#F5F4F2; color:#1A1817; border-color:#F5F4F2;">
+        SAY HELLO
       </a>
       <a href="#"
-        class="px-6 py-3 text-sm bg-transparent no-underline"
-        style="border:var(--stroke) solid var(--border); border-radius:var(--radius); font-weight:300; min-height:44px; display:inline-flex; align-items:center;">
-        Download resume
+         class="brutal-btn text-lg"
+         style="border-color:#F5F4F2; color:#F5F4F2;">
+        DOWNLOAD CV
       </a>
     </div>
   </div>
 </section>
 
 <!-- Footer -->
-<footer class="py-16" style="border-top:var(--stroke) solid var(--border);">
-  <div class="w-full max-w-[1280px] mx-auto px-5 md:px-10 flex flex-col md:flex-row items-center justify-between gap-4">
-    <p class="text-xs text-muted-foreground m-0" style="font-weight:300;">© 2026 Aria Chen · Made with care in Beijing</p>
-    <div class="flex items-center gap-6">
-      <a href="#" class="text-xs text-muted-foreground no-underline nav-link relative" style="font-weight:300;">Twitter</a>
-      <a href="#" class="text-xs text-muted-foreground no-underline nav-link relative" style="font-weight:300;">Dribbble</a>
-      <a href="#" class="text-xs text-muted-foreground no-underline nav-link relative" style="font-weight:300;">GitHub</a>
+<footer class="dark-section py-12" style="border-top:4px solid #3D3833;">
+  <div class="w-full max-w-[1600px] mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
+    <p class="text-xs uppercase tracking-[0.15em] m-0" style="font-weight:500; color:#A69E95;">© 2026 ARIA CHEN</p>
+    <div class="flex items-center gap-8">
+      <a href="#" class="text-sm uppercase tracking-[0.1em] text-white no-underline brutal-link" style="border-bottom-color:transparent;">Twitter</a>
+      <a href="#" class="text-sm uppercase tracking-[0.1em] text-white no-underline brutal-link" style="border-bottom-color:transparent;">Dribbble</a>
+      <a href="#" class="text-sm uppercase tracking-[0.1em] text-white no-underline brutal-link" style="border-bottom-color:transparent;">GitHub</a>
     </div>
   </div>
 </footer>
 
-<!-- Scripts -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  // Entrance animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
       }
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.1 });
   document.querySelectorAll('.section-entrance').forEach(el => observer.observe(el));
-
-  // MeshGradient shader
-  const shaderContainer = document.getElementById('hero-shader');
-  if (shaderContainer && typeof MeshGradient !== 'undefined') {
-    const root = ReactDOM.createRoot(shaderContainer);
-    root.render(React.createElement(MeshGradient, {
-      colors: ["#F2EFEA","#E8E2DA","#DDD5CA","#EDE7DE","#E5DED4"],
-      distortion: 0.4,
-      swirl: 0.3,
-      grainMixer: 0.08,
-      speed: 0.15,
-      style: { position: 'absolute', inset: 0, width: '100%', height: '100%' }
-    }));
-  }
 });
 </script>
-<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 </body>
 </html>
